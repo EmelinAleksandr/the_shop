@@ -1,0 +1,14 @@
+<div id="autorized">
+    <form>
+        <div class="caption_autor">Вход в систему <div class="close" onclick="close_autorized()">x</div></div>
+        <div class="login">
+            <label >Логин/почта</label>
+            <input type="text" name="login" oninput="login_input(this)">
+        </div>
+        <div class="password">
+            <label for="">Пароль</label>
+            <input type="password" name="password" oninput="password_input(this)" required>
+        </div> 
+        <div id="submit" onclick="get_user_info()">Далее</div>
+    </form>
+</div>

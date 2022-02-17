@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Serenity</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <ul class="menu_container">
+                <li class="menu_item"><img src="/img/icon.gif" alt="Бэтмен" class="logo"></li>
+            </ul>
+            <div class="author_container">
+                <div class="basket_message" onclick="open_basket()"> 
+                    <p id="indicat_basket"></p>
+                    <img style="width: 32px" src="/img/cart.png" alt="">
+                </div>
+                <div id="autorized_container">
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="filter_container">
+            
+                <p>Фильтр</p>
+                
+                <form>
+                    <div class="item_filters">
+                        <p>Цена</p>
+                        <div class="input_item">
+                            <input type="number" name='price_with' oninput="in_price_with(this)"> - <input type="number" name='price_to' oninput="in_price_to(this)">
+                        </div>
+                    </div>
+                    
+                    <div class="item_filters">
+                        <p>Тип</p>
+                        <div class="item_filters">
+                            <p id="categorie_select" onclick="view_menu_filter()">Всё</p> <!-- Заголовок -->
+                            
+                            <ul class="categories_container">                        <!-- Контейнер, который скрывается и раскрывается -->
+                                <li class="categore" data-id="1" onclick="select_item_menu(1)">Всё</li>            <!-- Значение, которое может выбираться -->
+                                <li class="categore" data-id="2" onclick="select_item_menu(2)">Посуда</li>         <!-- Значение, которое может выбираться -->
+                                <li class="categore" data-id="3" onclick="select_item_menu(3)">Аксессуары</li>     <!-- Значение, которое может выбираться -->
+                                <li class="categore" data-id="4" onclick="select_item_menu(4)">Комплектующие</li>  <!-- Значение, которое может выбираться -->
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="item_likes">
+                        <label class="like_checkbox" >Избранное <input type="checkbox" id="like_checkbox" onclick="like_filter(this)"/> <span></span></label> 
+                    </div>
+                    
+                    <button type="button" class="btn_filter" onclick="filtering(this)">Применить</button>
+                </form>
+            </div>
+            <div class="content">
+                <ul class="items"></ul>
+            </div>
+        </div>
+    </section>
+    <footer>   
+    </footer>
+
+    <div id="windows"></div>
+    <script src="/js/script_autorized.js"></script>
+    <script src="/js/script_basket.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

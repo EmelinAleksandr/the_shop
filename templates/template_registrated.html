@@ -1,0 +1,23 @@
+<div id="autorized">
+    <form>
+        <div class="caption_autor">Регистрация в системе <div class="close" onclick="close_autorized()">x</div></div>
+        <div class="login">
+            <label for="">Логин</label>
+            <input type="text" name="login" oninput="valid_login(this)">
+            <p class="unvalid double">Логин занят!</p>
+            <p class="unvalid req">Поле не должно быть пустым</p>
+        </div>
+        <div class="password">
+            <label for="">Пароль</label>
+            <input type="password" name="password" oninput="password_input(this)">
+            <p class="unvalid req">Поле не должно быть пустым</p>
+        </div>
+        <div class="email">
+            <label for="">Email</label>
+            <input type="text" name="email" oninput="valid_email(this)">
+            <p class="unvalid double">Email уже есть в системе!</p>
+            <p class="unvalid req">Поле не должно быть пустым</p>
+        </div>
+        <div id="submit" onclick="add_user()">Далее</div>
+    </form>
+</div>
